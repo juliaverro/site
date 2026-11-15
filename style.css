@@ -1,66 +1,114 @@
-*{
+* {
   font-family: "Poppins";
 }
 
 header {
-    position: fixed; /* Fixa o cabeçalho no topo da viewport, mantendo-o visível durante a rolagem */
-    inset: 0 0 auto 0; /* Posiciona no topo (top: 0, right: 0, bottom: auto, left: 0), esticando de ponta a ponta na horizontal */
-    z-index: 10; /* Define a ordem de empilhamento, garantindo que o cabeçalho fique acima de outros elementos da página */
-    display: flex; /* Ativa o modelo de layout Flexbox para alinhar os elementos filhos */
-    align-items: center; /* Alinha os itens verticalmente ao centro dentro do cabeçalho */
-    justify-content: space-between; /* Distribui o espaço uniformemente, empurrando os itens para as extremidades */
-    padding: 14px; /* Define o espaçamento interno: 14px em cima/baixo*/
-    background: rgba(141, 57, 57, 0.75); /* Define a cor de fundo com um tom claro translúcido (opacidade de 75%) */
-    -webkit-backdrop-filter: blur(12px) saturate(140%); /* Aplica desfoque e saturação no fundo para navegadores WebKit (Safari/iOS) */
-    backdrop-filter: blur(12px) saturate(140%); /* Aplica desfoque de 12px e aumenta a saturação do que está por trás do elemento */
-    box-shadow: 0 2px 12px rgba(63, 20, 41, 0.08); /* Adiciona uma sombra suave e difusa abaixo do cabeçalho */
+  position: fixed;
+  /* Fixa o cabeçalho no topo da viewport, mantendo-o visível durante a rolagem */
+  inset: 0 0 auto 0;
+  /* Posiciona no topo (top: 0, right: 0, bottom: auto, left: 0), esticando de ponta a ponta na horizontal */
+  z-index: 10;
+  /* Define a ordem de empilhamento, garantindo que o cabeçalho fique acima de outros elementos da página */
+  display: flex;
+  /* Ativa o modelo de layout Flexbox para alinhar os elementos filhos */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro dentro do cabeçalho */
+  justify-content: space-between;
+  /* Distribui o espaço uniformemente, empurrando os itens para as extremidades */
+  padding: 14px;
+  /* Define o espaçamento interno: 14px em cima/baixo*/
+  background: rgba(141, 57, 57, 0.75);
+  /* Define a cor de fundo com um tom claro translúcido (opacidade de 75%) */
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  /* Aplica desfoque e saturação no fundo para navegadores WebKit (Safari/iOS) */
+  backdrop-filter: blur(12px) saturate(140%);
+  /* Aplica desfoque de 12px e aumenta a saturação do que está por trás do elemento */
+  box-shadow: 0 2px 12px rgba(63, 20, 41, 0.08);
+  /* Adiciona uma sombra suave e difusa abaixo do cabeçalho */
 
-    ul{
-        list-style-type: none; /*tira as bolinhas do item*/
-        display: flex; /*alinha os itens lado a lado*/
-        gap: 20px; /*cria espaço entre os itens*/
-        justify-content: flex-start; /* Alinha à esquerda */  
-        color: rgb(223, 187, 187);
-}
-     ul li a{
-         text-decoration: none; /* Remove o sublinhado */
-         color: inherit;        /* Faz o link herdar a cor do texto normal*/
- }
+  ul {
+    list-style-type: none;
+    /*tira as bolinhas do item*/
+    display: flex;
+    /*alinha os itens lado a lado*/
+    gap: 20px;
+    /*cria espaço entre os itens*/
+    justify-content: flex-start;
+    /* Alinha à esquerda */
+    color: rgb(223, 187, 187);
+  }
+
+  ul li a {
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: inherit;
+    /* Faz o link herdar a cor do texto normal*/
+  }
 }
 
-.logo{
-    filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(464%) hue-rotate(314deg) brightness(96%) contrast(88%);
+.logo {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(464%) hue-rotate(314deg) brightness(96%) contrast(88%);
 }
 
-body{
-    background-color: rgba(223, 187, 187, 0.14);
+body {
+  background-color: rgba(223, 187, 187, 0.14);
 }
-.secao1{
+
+.secao1 {
   position: relative;
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 120px 160px;
+  justify-content: space-between;
+  padding: 120px 10% 80px 10%;
+  /* Usar % no lugar de 160px evita que quebre em telas menores */
   overflow: hidden;
   box-sizing: border-box;
   background-color: rgba(235, 230, 230, 0.31);
-  justify-content: space-between;
-  gap: 40px;
-
-  h1{
-    margin: 0;
-  }
+  gap: 20px;
 }
 
-.secao1-foto{
- position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: bottom;
+.secao1 h1 {
+  margin: 0;
+}
+
+/* Limita a largura da coluna de texto */
+.hero-titulo {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* Limita a largura da coluna da imagem */
+.secao1-foto {
+  flex: 1;
+  max-width: 550px;
+  /* Ajuste esse valor para deixar a foto maior ou menor */
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 14%);
   mask-image: linear-gradient(to right, transparent 0%, #000 14%);
   animation: foto-surgir 1.2s ease-out both;
 }
 
+/* Aplica o ajuste de tamanho diretamente na imagem */
+.secao1-foto img {
+  width: 100%;
+  max-height: 85vh;
+  /* Impede que a foto fique mais alta que a tela */
+  height: auto;
+  object-fit: cover;
+  /* Use 'contain' se não quiser cortar nenhuma borda da foto */
+  border-radius: 8px;
+  /* Opcional: suaviza os cantos */
+  display: block;
+}
+
+a.botao-pacote {
+  background-color: blueviolet;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
