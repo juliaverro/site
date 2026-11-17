@@ -1,5 +1,16 @@
 * {
-  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(223, 187, 187, 0.14);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -48,10 +59,6 @@ header {
 
 .logo {
   filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(464%) hue-rotate(314deg) brightness(96%) contrast(88%);
-}
-
-body {
-  background-color: rgba(223, 187, 187, 0.14);
 }
 
 .secao1 {
@@ -113,6 +120,7 @@ a.botao-pacote {
   color: white;
 }
 
+<<<<<<< Updated upstream
 #servicos{
   background-color: rgba(255, 255, 255, 0.579);
   text-align: center;
@@ -154,4 +162,50 @@ a.botao-pacote {
   object-fit: cover;
   border-radius: 4px;
   margin-top: auto;
+=======
+.rodape {
+  background-color: rgba(141, 57, 57, 0.75);
+  padding: 10px 200px;
+  max-width: 100%;
+
+  color: #f8f5f2e1;
+}
+
+.rodape-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 50px;
+}
+
+.logo-img {
+  padding: 0 10px;
+}
+
+.logo-titulo {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logo-footer {
+  width: 150px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(464%) hue-rotate(314deg) brightness(96%) contrast(88%);
+}
+
+.endereco {
+  font-size: 14px;
+}
+
+.titulo-redes {
+font-size: 14px;
+}
+
+.rodape-direitos {
+  /* padding: 15px; */
+  font-size: 13px;
+  color: #a89f96;
+  text-align: center;
+>>>>>>> Stashed changes
 }
