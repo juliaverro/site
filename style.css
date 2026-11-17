@@ -57,6 +57,11 @@ header {
   }
 }
 
+.sobretitulo{
+  font-size: small;
+    color: rgba(141, 57, 57, 0.75);
+}
+
 .logo {
   filter: brightness(0) saturate(100%) invert(83%) sepia(10%) saturate(464%) hue-rotate(314deg) brightness(96%) contrast(88%);
 }
@@ -120,16 +125,10 @@ a.botao-pacote {
   color: white;
 }
 
-<<<<<<< Updated upstream
 #servicos{
   background-color: rgba(255, 255, 255, 0.579);
   text-align: center;
   padding: 10px 0;
-
-  .sobretitulo{
-    font-size: small;
-    color: rgba(141, 57, 57, 0.75);
-  }
 }
 
 .grade-servicos{
@@ -162,7 +161,7 @@ a.botao-pacote {
   object-fit: cover;
   border-radius: 4px;
   margin-top: auto;
-=======
+}
 .rodape {
   background-color: rgba(141, 57, 57, 0.75);
   padding: 10px 200px;
@@ -207,5 +206,4 @@ font-size: 14px;
   font-size: 13px;
   color: #a89f96;
   text-align: center;
->>>>>>> Stashed changes
 }
