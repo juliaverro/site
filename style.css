@@ -4,6 +4,7 @@
   box-sizing: border-box;
 
 }
+
 :root {
   --font: 'Poppins', sans-serif;
 }
@@ -130,6 +131,100 @@ a.botao-pacote {
   color: white;
 }
 
+/* seção 2 */
+.secao2 {
+  text-align: center;
+  justify-content: center;
+  background-color: #f8efed;
+}
+
+.incluso-pacotes {
+  margin: 24px;
+}
+
+.itens-inclusos {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  overflow: hidden;
+  /*checar depois o que faz e se precisa mesmo*/
+}
+
+.card-inclusao {
+  width: 31%;
+  height: 500px;
+  float: left;
+  margin: 1.1%;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #eededb;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+
+}
+
+/* seção - pacotes*/
+.secao-pacotes {
+  margin: 20px auto;
+
+}
+
+.card-pacotes {
+  padding: 24px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+  background-color: #ffffff;
+  border: 1px solid #e6d5d0;
+  text-align: left;
+
+  ul {
+    padding-left: 20px;
+    height: 180px;
+    gap: 20px;
+  }
+
+  .tenho-interesse {
+    text-align: center;
+    margin: 20px 0 12px 0;
+  }
+
+  .botao-interesse {
+    background-color: white;
+    padding: 16px;
+    color: #654b43;
+    border: 1px solid #654b43;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #654b43;
+      color: #ffffff;
+    }
+  }
+
+
+}
+
+
 #servicos {
   background-color: rgba(255, 255, 255, 0.579);
   text-align: center;
@@ -143,7 +238,7 @@ a.botao-pacote {
 
 .cartao-servico {
   width: 15%;
-  height: 250px;
+  height: 380px;
   display: inline-flex;
   flex-direction: column;
   vertical-align: top;
@@ -162,7 +257,7 @@ a.botao-pacote {
 
 .img-cartao-servico {
   width: 100%;
-  height: 120px;
+  height: 250px;
   object-fit: cover;
   border-radius: 4px;
   margin-top: auto;
