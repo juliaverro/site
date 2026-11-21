@@ -34,7 +34,7 @@ header {
   /* Distribui o espaço uniformemente, empurrando os itens para as extremidades */
   padding: 14px;
   /* Define o espaçamento interno: 14px em cima/baixo*/
-  background: rgba(141, 57, 57, 0.75);
+  background: #8d3939bf;
   /* Define a cor de fundo com um tom claro translúcido (opacidade de 75%) */
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   /* Aplica desfoque e saturação no fundo para navegadores WebKit (Safari/iOS) */
@@ -65,7 +65,7 @@ header {
 
 .sobretitulo {
   font-size: small;
-  color: rgba(141, 57, 57, 0.75);
+  color: #8d3939bf;
 }
 
 .logo {
@@ -78,22 +78,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 10% 80px 10%;
+  padding: 110px 10% 80px 10%;
   /* Usar % no lugar de 160px evita que quebre em telas menores */
   overflow: hidden;
   box-sizing: border-box;
   background-color: rgba(235, 230, 230, 0.31);
   gap: 20px;
+
+  h1 {
+    font-weight: 300;
+    margin: 0 0 35px 0;
+    font-size: 3rem;
+    color: #8d3939bf;
+  }
+
+  h2 {
+    margin: 0;
+    color: #000000d5;
+  }
 }
 
-.secao1 h1 {
-  margin: 0;
-}
 
 /* Limita a largura da coluna de texto */
 .hero-titulo {
-  flex: 1;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   max-width: 550px;
+  text-align: left;
+  flex-direction: column;
 }
 
 /* Limita a largura da coluna da imagem */
@@ -122,8 +136,8 @@ header {
   display: block;
 }
 
-a.botao-pacote {
-  background-color: rgba(141, 57, 57, 0.75);
+.botao-pacote {
+  background-color: #8d3939bf;
   margin-top: 10px;
   padding: 10px 16px;
   border-radius: 10px;
@@ -131,8 +145,94 @@ a.botao-pacote {
   color: white;
 }
 
+.botao-pacote:hover {
+  background-color: #8d3939ec;
+  color: #ffffff;
+}
+
+.secao-galeria {
+  padding: 30px 0 0 0;
+}
+
+.cabecalho-galeria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conjunto-galeria {
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 1200px;
+  margin: 15px;
+  padding: 20px 20px 20px 20px;
+}
+
+.galeria {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scrollbar-width: none;
+  min-width: 0;
+}
+
+.galeria::-webkit-scrollbar {
+  display: none;
+}
+
+.galeria-grupo {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  scroll-snap-align: start;
+  scroll-margin-top: 150px;
+}
+
+.galeria-grupo img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.btn-seta {
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #392923;
+  text-decoration: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 10;
+  transition: background-color 0.2s;
+
+}
+
+.btn-esquerda {
+  left: 0px;
+}
+
+.btn-direita {
+  right: 0;
+}
+
+
+
 /* seção 2 */
 .secao2 {
+  padding: 12px;
   text-align: center;
   justify-content: center;
   background-color: #f8efed;
@@ -155,9 +255,10 @@ a.botao-pacote {
   float: left;
   margin: 1.1%;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #ffffffef;
   border: 1px solid #eededb;
   text-align: center;
+  border-radius: 5px;
 
   img {
     width: 100%;
@@ -196,6 +297,7 @@ a.botao-pacote {
   background-color: #ffffff;
   border: 1px solid #e6d5d0;
   text-align: left;
+  border-radius: 5px;
 
   ul {
     padding-left: 20px;
@@ -214,6 +316,8 @@ a.botao-pacote {
     color: #654b43;
     border: 1px solid #654b43;
     transition: all 0.3s;
+    border-radius: 5px;
+    text-decoration: none;
 
     &:hover {
       background-color: #654b43;
@@ -226,9 +330,9 @@ a.botao-pacote {
 
 
 #servicos {
-  background-color: rgba(255, 255, 255, 0.579);
   text-align: center;
   padding: 10px 0;
+  margin: 24px;
 }
 
 .grade-servicos {
@@ -245,7 +349,7 @@ a.botao-pacote {
   margin: 0.8%;
   padding: 5px;
   text-align: center;
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid white;
   border-radius: 10px;
   font-size: 0.82rem;
@@ -263,8 +367,83 @@ a.botao-pacote {
   margin-top: auto;
 }
 
+
+
+.secao-contato {
+  text-align: center;
+  padding: 50px 9%;
+  line-height: 1.7;
+}
+
+.caixa-contato {
+  background-color: #ffffff8d;
+  padding: 20px 50px 50px;
+  border-radius: 5px;
+}
+
+.texto-contato {
+  line-height: 1.9;
+}
+
+.whatsapp-contato {
+  margin-top: 30px;
+
+}
+
+.botao-whatsapp {
+  padding: 12px;
+  text-decoration: none;
+  background-color: #8d3939ec;
+  color: #ffffff;
+  border: 1px solid;
+  border-color: #8d3939bf;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.botao-whatsapp:hover {
+  background-color: #8d3939bf;
+  color: #ffffff;
+}
+
+.caixa-sobre {
+  background-color: #ffffff8d;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.sobre {
+  display: flex;
+  padding: 24px 10%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+}
+
+
+.img-julia {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.texto-julia {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  text-align: left;
+  gap: 10px;
+}
+
 .rodape {
-  background-color: rgba(141, 57, 57, 0.75);
+  background-color: #8d3939bf;
   padding: 10px 200px;
   max-width: 100%;
 
