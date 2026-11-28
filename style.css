@@ -118,9 +118,7 @@ header {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 14%);
   mask-image: linear-gradient(to right, transparent 0%, #000 14%);
-  animation: foto-surgir 1.2s ease-out both;
 }
 
 /* Aplica o ajuste de tamanho diretamente na imagem */
